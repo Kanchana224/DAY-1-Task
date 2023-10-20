@@ -1,0 +1,36 @@
+Write a blog on Difference between HTTP1.1 vs HTTP2
+
+* HTTP/1.1 (1997)                        * HTTP/2 (2015) 
+  {Latenct:18ms }                          {Latency:19ms}
+  {load time:2.37s}                        {Load time:1.20s}
+
+MULTIPLEXING
+   * HTTP/1.1:Uses a single request-response mechanism.Which means that each request must wait for the 
+             previous one to complete before it can be processed.
+   * HTTP/2  :Supports multiplexing allowing multiple request and responsed to be sent and received in 
+             parallel over a single connection.This greatly improves the efficiency of data transfer.
+
+HEADER COMPRESSION
+   * HTTP/1.1:Header are sent as plain text leading to a lot of redundancy and wasted bandwidth.
+   * HTTP/2  :Compresses headers reducing overhead and saving bandwidth,This is particularly beneficial
+             for mobile and low bandwidth connections.
+
+SERVER PUSH
+   * HTTP/1.1:Clients need to explitly request each resource,Which can result in multiple round trips for
+             a single page.
+   * HTTP/2  :Supports server push where the server can send additional resources.(Eg:CSS,JS) to the Client
+             before the client requests them improving page load times.
+
+PRIORITIZATION
+   * HTTP/1.1:Does not provide built-in support for prioritization requests.
+   * HTTP/2  :Allows for stream prioritization so more important resources can be deleived first improving the 
+             war experience.
+
+CONNECTION HANDLING
+   * HTTP/1.1:Requires multiple connections for parallel requests,which can lead ro resource contention and 
+            increased letency.
+   * HTTP/2  :Uses a single multiplexed connection reducing the overhead of managing multiple connection.
+
+BINARY PROTOCOL
+   * HTTP/1.1:Uses plain text for communication which is human readable but less efficient for machine.
+   * HTTP/2  :Employs a binary protocol.Which is more efficient for parsing and processing by machine.                                                                                    

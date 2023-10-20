@@ -1,0 +1,15 @@
+ Write a blog about objects and its internal representation in Javascript
+
+* Objects are a fundamental data structure in javascript,used for storing and organizing data.
+* An object consists of key-value pairs where keys are string or symbols,and values can be of 
+  any datatype.
+* Javasript engines use the concepts of hidden classes and shapes to optimize object property 
+  access and method calls.
+* Hidden classes track an objects structure and properties, improving perfomance by assigning them
+  a common class.
+* The shape of an object is determined by its hidden class.Objects with the same hidden class have
+  the same shape.
+* Objects in Javascript can be accessed and manipulated through the prototype chain,enabling code
+  reuse and inheritances.
+* Understanding the internal representation of objects its crucial for writing efficient and performant
+  Javascript code.          
